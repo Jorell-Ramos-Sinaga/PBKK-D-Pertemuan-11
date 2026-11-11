@@ -1,0 +1,43 @@
+# Environment (berisi konfigurasi lokal/rahasia; template 'env' tetap disimpan)
+.env
+
+# Dependensi
+/vendor/
+/node_modules/
+
+# File sementara CodeIgniter (isi folder writable)
+writable/cache/*
+!writable/cache/index.html
+!writable/cache/.htaccess
+writable/logs/*
+!writable/logs/index.html
+!writable/logs/.htaccess
+writable/session/*
+!writable/session/index.html
+!writable/session/.htaccess
+writable/debugbar/*
+!writable/debugbar/.gitkeep
+writable/uploads/*
+!writable/uploads/index.html
+!writable/uploads/.htaccess
+
+# Build / coverage / backup
+/build/
+/coverage/
+*.bak
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Sistem operasi
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Agent / alat bantu lokal (opsional)
+.gemini/
+

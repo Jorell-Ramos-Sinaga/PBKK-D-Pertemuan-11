@@ -1,0 +1,376 @@
+/**
+ * ShopEase Landing Page Stylesheet
+ * Framework: CodeIgniter 4 + Bootstrap 5.3
+ */
+
+:root {
+    --se-primary:      #1B263B; /* navy: navbar, footer, heading */
+    --se-accent:       #FF7A1A; /* oranye: aksen utama, tombol CTA */
+    --se-accent-hover: #E0640F;
+    --se-accent-2:     #1FA37A; /* hijau: status positif, badge */
+    --se-bg:           #F7F9FC; /* background default */
+    --se-card:         #FFFFFF;
+    --se-text:         #2B2F3A;
+    --se-muted:        #6B7280;
+    --se-border:       #E5E7EB;
+    --se-radius:       14px;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--se-text);
+    background-color: var(--se-bg);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: var(--se-primary);
+    font-weight: 700;
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #FFFFFF !important;
+    font-weight: 700;
+}
+
+.navbar-brand .brand-text {
+    color: #FFFFFF;
+}
+
+/* Utilitas Warna Kustom */
+.bg-se-primary {
+    background-color: var(--se-primary) !important;
+}
+
+.text-se-primary {
+    color: var(--se-primary) !important;
+}
+
+.text-se-accent {
+    color: var(--se-accent) !important;
+}
+
+.bg-se-accent {
+    background-color: var(--se-accent) !important;
+}
+
+.text-se-accent-2 {
+    color: var(--se-accent-2) !important;
+}
+
+.bg-se-accent-2 {
+    background-color: var(--se-accent-2) !important;
+}
+
+.bg-se-surface {
+    background-color: #FFFFFF;
+}
+
+/* Section Title Pill Badges (Kontras Tinggi & Selalu Terlihat Jelas) */
+.badge-se-accent {
+    background-color: rgba(255, 122, 26, 0.12) !important;
+    color: #D95D00 !important;
+    border: 1px solid rgba(255, 122, 26, 0.25);
+    font-weight: 600;
+}
+
+.badge-se-accent-2 {
+    background-color: rgba(31, 163, 122, 0.12) !important;
+    color: #0E7554 !important;
+    border: 1px solid rgba(31, 163, 122, 0.25);
+    font-weight: 600;
+}
+
+.badge-se-primary {
+    background-color: rgba(27, 38, 59, 0.10) !important;
+    color: var(--se-primary) !important;
+    border: 1px solid rgba(27, 38, 59, 0.20);
+    font-weight: 600;
+}
+
+/* Kotak Ikon (Icon Box) dengan Kontras Warna yang Jelas */
+.se-icon-box {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+}
+
+.se-icon-accent {
+    background-color: rgba(255, 122, 26, 0.12);
+    color: var(--se-accent);
+}
+
+.se-icon-accent-2 {
+    background-color: rgba(31, 163, 122, 0.12);
+    color: var(--se-accent-2);
+}
+
+.se-icon-primary {
+    background-color: rgba(27, 38, 59, 0.08);
+    color: var(--se-primary);
+}
+
+.se-icon-warning {
+    background-color: rgba(245, 158, 11, 0.12);
+    color: #D97706;
+}
+
+/* Tombol Kustom */
+.btn-se-accent {
+    background-color: var(--se-accent);
+    color: #FFFFFF;
+    border: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-se-accent:hover, .btn-se-accent:focus {
+    background-color: var(--se-accent-hover);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 122, 26, 0.35);
+}
+
+.btn-se-primary {
+    background-color: var(--se-primary);
+    color: #FFFFFF;
+    border: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-se-primary:hover, .btn-se-primary:focus {
+    background-color: #0E1626;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(27, 38, 59, 0.25);
+}
+
+.btn-se-outline {
+    background-color: transparent;
+    border: 1.5px solid var(--se-primary);
+    color: var(--se-primary);
+    font-weight: 600;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-se-outline:hover {
+    background-color: var(--se-primary);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+/* Kartu Kustom */
+.se-card {
+    background-color: var(--se-card);
+    border: 1px solid var(--se-border);
+    border-radius: var(--se-radius);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.se-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(27, 38, 59, 0.08);
+}
+
+.se-card-static {
+    background-color: var(--se-card);
+    border: 1px solid var(--se-border);
+    border-radius: var(--se-radius);
+}
+
+/* Navigasi */
+.nav-link {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75) !important;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #FFFFFF !important;
+}
+
+.nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background-color: var(--se-accent);
+    border-radius: 2px;
+}
+
+.hover-white:hover {
+    color: #FFFFFF !important;
+}
+
+/* Form Controls */
+.form-control:focus, .form-select:focus {
+    border-color: var(--se-accent);
+    box-shadow: 0 0 0 0.25rem rgba(255, 122, 26, 0.18);
+}
+
+/* Tipografi & Hero Styles */
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.bg-gradient-hero {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+}
+
+/* Hero Section dengan Dukungan Background Gambar */
+.hero-section-with-bg {
+    position: relative;
+    background-color: #F8FAFC;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.86) 0%, rgba(241, 245, 249, 0.80) 100%), url('../images/bg-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-image-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(27, 38, 59, 0.12) !important;
+}
+
+.hero-showcase {
+    max-width: 480px;
+}
+
+.floating-badge {
+    z-index: 2;
+    animation: floatAnim 4s ease-in-out infinite alternate;
+}
+
+.floating-badge-top {
+    top: -18px;
+    left: -20px;
+}
+
+.floating-badge-bottom {
+    bottom: -22px;
+    right: -20px;
+}
+
+@keyframes floatAnim {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
+@media (max-width: 576px) {
+    .floating-badge-top {
+        top: -10px;
+        left: 0;
+    }
+    .floating-badge-bottom {
+        bottom: -15px;
+        right: 0;
+    }
+}
+
+/* Badge Nomor Langkah Alur Belanja */
+.step-number-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--se-primary);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Utilitas Teks & Produk */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Box Gambar Produk */
+.product-visual-wrapper {
+    height: 190px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #F8FAFC;
+}
+
+.product-real-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.se-card:hover .product-real-img {
+    transform: scale(1.05);
+}
+
+.product-placeholder-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.se-card:hover .product-placeholder-box {
+    transform: scale(1.05);
+}
+
+/* Accordion Kustom */
+.custom-accordion .accordion-item {
+    border-color: var(--se-border) !important;
+}
+
+.custom-accordion .accordion-button {
+    background-color: #FFFFFF;
+    color: var(--se-primary);
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: rgba(255, 122, 26, 0.06);
+    color: var(--se-primary);
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(255, 122, 26, 0.25);
+}
+
+.transition-icon {
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.se-card:hover .transition-icon {
+    transform: scale(1.1);
+    background-color: var(--se-accent) !important;
+    color: #FFFFFF !important;
+}
+
