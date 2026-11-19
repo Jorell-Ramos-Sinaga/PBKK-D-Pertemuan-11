@@ -6,7 +6,6 @@
 | **NRP** | 5025241202 |
 | **Mata Kuliah** | Pemrograman Berbasis Kerangka Kerja |
 | **Kelas** | D |
-| **Tanggal** | 20 November 2026 |
 
 ---
 
