@@ -41,3 +41,13 @@ desktop.ini
 # Agent / alat bantu lokal (opsional)
 .gemini/
 
+# Berkas Tugas Sebelumnya (Landing Page)
+README.md
+docs/screenshots/home.png
+docs/screenshots/about.png
+docs/screenshots/contact.png
+
+# Berkas Instruksi Agent
+AGENT_INSTRUCTIONS*.md
+
+
